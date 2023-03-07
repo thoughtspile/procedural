@@ -4,7 +4,10 @@
   "description": "Some procedurally generated stuff",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "format": "prettier --write .",
+    "stage": "git add ."
   },
   "repository": {
     "type": "git",
@@ -15,5 +18,16 @@
   "bugs": {
     "url": "https://github.com/thoughtspile/procedural/issues"
   },
-  "homepage": "https://github.com/thoughtspile/procedural#readme"
+  "homepage": "https://github.com/thoughtspile/procedural#readme",
+  "devDependencies": {
+    "glob": "^9.2.1",
+    "pre-commit": "^1.2.2",
+    "prettier": "^2.8.4",
+    "vite": "^4.1.4"
+  },
+  "pre-commit": [
+    "format",
+    "build",
+    "stage"
+  ]
 }
