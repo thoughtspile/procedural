@@ -29,5 +29,11 @@
     "format",
     "build",
     "stage"
-  ]
+  ],
+  "dependencies": {
+    "colord": "^2.9.3",
+    "flat-palettes": "^0.1.0",
+    "nanostores": "^0.7.4",
+    "simplex-noise": "^4.0.1"
+  }
 }

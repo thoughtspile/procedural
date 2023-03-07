@@ -1,11 +1,39 @@
 <!DOCTYPE html>
 <head>
   <title>Procedural color blobs</title>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"
+  />
   
-  <script type="module" crossorigin src="../assets/index-6e2ca852.js"></script>
-  <link rel="stylesheet" href="../assets/index-035e3853.css">
+
+  <meta property="og:title" content="Procedural color blobs" />
+  <meta
+    property="og:url"
+    content="https://blog.thoughtspile.tech/procedural/blobs/"
+  />
+  <meta property="og:site_name" content="Vladimir Klepov as a Coder" />
+  <meta
+    property="og:image"
+    content="https://blog.thoughtspile.tech/procedural/blobs/screen.png"
+  />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:creator" content="@thoughtspile" />
+  <meta
+    name="twitter:image"
+    content="https://blog.thoughtspile.tech/procedural/blobs/screen.png"
+  />
+  <script type="module" crossorigin src="../assets/index-0978a7f0.js"></script>
+  <link rel="stylesheet" href="../assets/index-2ec15d14.css">
 </head>
 <body>
   <canvas id="app" class="app"></canvas>
+  <div class="controls">
+    <input type="range" id="noise-clamp" min="0.5" step="0.1" max="10" />
+    <input type="range" id="noise-freq" min="5" max="80" />
+    <input type="range" id="period" max="4000" min="200" />
+    <button id="regenerate">Regenerate</button><br />
+    <a href="https://blog.thoughtspile.tech"><button>By Vladimir</button></a>
+  </div>
   
 </body>
