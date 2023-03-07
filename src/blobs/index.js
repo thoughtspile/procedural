@@ -1,9 +1,7 @@
 import colors from "flat-palettes";
-import { colord, extend } from "colord";
-import mixPlugin from "colord/plugins/mix";
+import { colord } from "colord";
 import { perlin3 as noise, seed, lerp } from "./perlin";
 
-extend([mixPlugin]);
 const seedColors = () => {
   const [c1, c2] = colors(2).map((c) => colord(c));
   const dark = c1.isLight() ? c2 : c1;
@@ -15,7 +13,7 @@ const clamp = (x) => Math.max(0, Math.min(1, x));
 const state = {
   time: 0,
   noiseClamp: 2,
-  noiseFreq: 30,
+  noiseFreq: 150,
   period: 1000,
 };
 
@@ -27,7 +25,10 @@ function draw(el) {
   const { noiseClamp, noiseFreq, time } = state;
   const [baseColor, altColor] = colorStore;
 
-  const { width, height } = el.getBoundingClientRect();
+  const width = window.innerWidth;
+  const height = window.innerHeight;
+  el.width = width;
+  el.height = height;
   const ctx = el.getContext("2d");
   const imageData = ctx.getImageData(0, 0, width, height);
   for (let y = 0; y < height; y++) {
