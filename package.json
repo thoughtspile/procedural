@@ -1,0 +1,19 @@
+{
+  "name": "procedural",
+  "version": "1.0.0",
+  "description": "Some procedurally generated stuff",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/thoughtspile/procedural.git"
+  },
+  "author": "Vladimir Klepov v.klepov@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thoughtspile/procedural/issues"
+  },
+  "homepage": "https://github.com/thoughtspile/procedural#readme"
+}
