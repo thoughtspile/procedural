@@ -1,6 +1,6 @@
 import colors from "flat-palettes";
 import { colord } from "colord";
-import { perlin3 as noise, seed, lerp } from "./perlin";
+import { perlin3 as noise, seed, lerp } from "../lib/perlin";
 
 const seedColors = () => {
   const [c1, c2] = colors(2).map((c) => colord(c));
