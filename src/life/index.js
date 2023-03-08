@@ -2,10 +2,12 @@ import colors from "flat-palettes";
 import { colord } from "colord";
 
 const seedColor = () => {
+  const isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
   while (true) {
     const hex = colors(1)[0];
-    const { s, l } = colord(hex).toHsl();
-    if (l > 20 && l < 65) {
+    const { l } = colord(hex).toHsl();
+    const contrast = isDark ? 100 - l : l;
+    if (contrast > 20 && contrast < 60) {
       return hex;
     }
   }
