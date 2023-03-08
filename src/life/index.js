@@ -64,6 +64,7 @@ function draw(el) {
 const dom = {
   canvas: document.getElementById("app"),
   regenerate: document.getElementById("regenerate"),
+  invite: document.getElementById("invite"),
 };
 
 dom.regenerate.addEventListener("click", () => {
@@ -85,6 +86,7 @@ function seed(x, y, spread = 6, items = 20) {
   for (let i = 0; i < items; i++) {
     queue.add(idx + 4 * (width * d() + d()));
   }
+  invite.style.display = "none";
 }
 let tracking = false;
 dom.canvas.addEventListener("pointerdown", () => (tracking = true));
@@ -92,9 +94,8 @@ dom.canvas.addEventListener("pointermove", (e) => {
   tracking && seed(e.clientX, e.clientY);
 });
 dom.canvas.addEventListener("pointerup", (e) => {
-  !queue.size && seed(e.clientX, e.clientY);
+  !queue.size && seed(e.clientX, e.clientY, 12, 400);
   tracking = false;
 });
 
-seed(window.innerWidth / 2, window.innerHeight / 2, 100, 5000);
 tick();

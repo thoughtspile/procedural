@@ -5,6 +5,10 @@ html {
   margin: 0;
   padding: 0;
   --background-body: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
 .app {
