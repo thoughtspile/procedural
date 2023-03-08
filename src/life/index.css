@@ -11,6 +11,10 @@ html {
   height: 100vh;
 }
 
+#invite {
+  color: black;
+}
+
 .app {
   touch-action: none;
   position: fixed;
